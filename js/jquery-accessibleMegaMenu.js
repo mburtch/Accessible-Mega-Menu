@@ -636,6 +636,10 @@ limitations under the License.
             this.mouseTimeoutID = setTimeout(function () {
                 clearTimeout(this.focusTimeoutID);
             }, 1);
+
+            if (isTouch) {
+                _togglePanel.call(this, event);
+            }
         };
 
         /**
